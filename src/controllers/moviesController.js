@@ -1,7 +1,7 @@
 const User = require('../models/User');
 const axios = require('axios');
 // Pasar a un archivo de configuración
-const apiKey = ''
+const apiKey = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NmVlNWMyODk1MzYxYzc4MWExYWJkMTczYTczOGI2NSIsInN1YiI6IjY0ZmM1YTc1ZmZjOWRlMGVkZWQyNjBkMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5zFS0e0Rcmrd7a7ScbLq8QZig_iIHZD79o04p1zL8ig'
 
 exports.nowPlaying = async (req, res) => {
     try {
