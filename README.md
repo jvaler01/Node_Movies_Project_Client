@@ -9,7 +9,10 @@ npm install
 ```
 docker-compose up -d
 ```
-
+4. Levantar server
+```
+node .\src\server.js
+```
 
 ## Stack usado
 * MongoDB
