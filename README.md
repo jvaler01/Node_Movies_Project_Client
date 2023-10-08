@@ -1,14 +1,16 @@
-# Server
+# Ejecutar en desarrollo
 
-Nombre: Jorge Valero Martín
+1. Clonar el repositorio
+2. Ejecutar
+```
+npm install
+```
+3. Levantar la base de datos
+```
+docker-compose up -d
+```
 
-Librerías:
-  - bcrypt para encriptar la contraseña.
-  - axios para hacer las llamadas a la api de movies.
-  - express como framework.
-  - jsonwebtoken para los token de sesión.
-  - mongoose para conectar con la base de datos mongo.
-Documentación:
-  -Falta mover claves, puertos, etc a archivos de configuración y revisar para mejorar la lógica.
-Base de Datos:
-  - La base de datos es Mongo, tiene una única colección para registrar los usuarios.
+
+## Stack usado
+* MongoDB
+* Node
