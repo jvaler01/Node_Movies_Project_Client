@@ -35,15 +35,15 @@ exports.popular = async (req, res) => {
 }
 exports.credits = async (req, res) => {
     try {
-        const { movieId } = req.body;
+        const movieId = req.query.id;
         const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/credits?language=es-ES`, {
         headers: {
             'Authorization': `Bearer ${apiKey}`
           },
         });
     
-        const movies = response.data.results;
-        res.status(200).json(movies);
+        const credits = response.data;
+        res.status(200).json(credits);
       } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Error al obtener las películas.' });

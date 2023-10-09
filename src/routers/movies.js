@@ -7,6 +7,6 @@ router.get('/now_playing', authMiddleware, moviesController.nowPlaying);
 
 router.get('/popular', authMiddleware, moviesController.nowPlaying);
 
-router.get('/credits', authMiddleware, moviesController.nowPlaying);
+router.get('/credits', authMiddleware, moviesController.credits);
 
 module.exports = router;
