@@ -38,7 +38,23 @@ exports.login = async (req, res) => {
 
         const token = jwt.sign({ userId: user._id }, 'api_movies', { expiresIn: '1h' });
 
-        res.status(200).json({ token });
+        res.status(200).json({ token, user });
+    } catch (error) {
+        res.status(500).json({ message: 'Error al iniciar sesión.' });
+    }
+}
+
+exports.user = async (req, res) => {
+    try {
+        const { email } = req.body;
+        const token = req.header('Authorization');
+        const user = await User.findOne({email});
+
+        if(!user){
+            return res.status(401).json({ message: 'Usurario no encontrado.'});
+        }
+
+        res.status(200).json({ token, user });
     } catch (error) {
         res.status(500).json({ message: 'Error al iniciar sesión.' });
     }
